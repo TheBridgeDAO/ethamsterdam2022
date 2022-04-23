@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  sw-demo:
+    container_name: sw-demo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '6001:80'
